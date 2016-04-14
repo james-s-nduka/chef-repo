@@ -7,5 +7,6 @@ node_name                "james_nduka"
 client_key               "#{current_dir}/james_nduka.pem"
 validation_client_name   "cd-demo-validator"
 validation_key           "#{current_dir}/cd-demo-validator.pem"
-chef_server_url          "https://tesco-chef-server/organizations/cd-demo"
+chef_server_url          "https://52.48.100.217/organizations/cd-demo"
 cookbook_path            ["#{current_dir}/../cookbooks"]
+ssl_verify_mode          :verify_none
