@@ -1,0 +1,9 @@
+{
+  "name": "ppe",
+  "description": "Place your Pre-Production nodes here",
+  "cookbook_versions": {
+    "sample-cookbook": "= 0.0.1"
+  },
+  "default_attributes":{
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "til",
+  "description": "Place your TIL nodes here",
+  "cookbook_versions": {
+    "sample-cookbook": "= 0.0.1"
+  },
+  "default_attributes":{
+  }
+}

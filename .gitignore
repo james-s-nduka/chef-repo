@@ -1,6 +1,7 @@
 # Chef
 .chef/*.pem
 .chef/encrypted_data_bag_secret
+cookbooks/
 
 # Ruby
 .rake_test_cache
@@ -50,3 +51,4 @@ Thumbs.db
 ehthumbs.db
 Desktop.ini
 $RECYCLE.BIN/
+
