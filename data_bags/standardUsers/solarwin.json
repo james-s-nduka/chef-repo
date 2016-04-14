@@ -1,0 +1,9 @@
+{
+  "id": "solarwin",
+  "comment": "Solarwinds Monitoring User",
+  "uid": "61574",
+  "gid": "solarwin",
+  "home": "/home/solarwin",
+  "shell": "/bin/bash",
+  "password": "$6$QLskshyx$fPXIZqOORx0R/ULnUe539w6z2iaZfCMxER2UmIGFjUy8fhMpbqUY1fSvV3Os0PIZkCeLLaCzrdfmtBmn2Be3K0"
+}

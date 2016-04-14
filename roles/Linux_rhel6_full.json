@@ -1,0 +1,14 @@
+{
+  "name": "Linux_rhel6_full",
+  "description": "RedHat 6 Base OS Build including hardening",
+  "override_attributes": {
+    "chef_client": {
+      "interval": "3600"
+    }
+  },
+  "run_list": [
+    "role[chef_master]",
+    "role[Vanilla_Linux_Base]",
+    "role[Vanilla_hardening]"
+  ]
+}

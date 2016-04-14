@@ -1,0 +1,9 @@
+{
+  "id": "apache",
+  "comment": "apache system user",
+  "uid": "48",
+  "gid": "apache",
+  "home": "/var/www",
+  "shell": "/sbin/nologin",
+  "password": "!"
+}

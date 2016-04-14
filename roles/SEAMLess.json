@@ -1,0 +1,18 @@
+{
+  "name": "SEAMLess",
+  "description": "SEAMLess Configuration",
+  "override_attributes": {
+    "chef_client": {
+      "interval": "3600"
+    }
+  },
+  "run_list": [
+    "recipe[python27::python27]",
+    "recipe[ddebatch::ddebatch]",
+    "recipe[teradataclient::teradataclient]",
+    "recipe[ropensource::ropensource]",
+    "recipe[rstudioserver::rstudioserver]",
+    "recipe[rreverseproxy::rreverseproxy]",
+    "recipe[rautomount::rautomount]"
+  ]
+}

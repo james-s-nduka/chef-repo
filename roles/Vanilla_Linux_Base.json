@@ -1,0 +1,26 @@
+{
+  "name": "Vanilla_Linux_Base",
+  "description": "RedHat 6 Base OS Build without hardening - v1.0",
+  "run_list": [
+    "recipe[dnsResolver::dnsResolver]",
+    "recipe[rootcacert::rootcacert]",
+    "recipe[tsmClient::tsmClient]",
+    "recipe[kdump::kdump]",
+    "recipe[standardUsersandGroups::standardusers]",
+    "recipe[redHatSatellite::redHatSatellite]",
+    "recipe[runLevel::runLevel]",
+    "recipe[hpDdmi::hpDdmi]",
+    "recipe[hpOml::installHPOMLproduction]",
+    "recipe[snmp::SNMP]",
+    "recipe[java::java]",
+    "recipe[ntp::ntp]",
+    "recipe[cfg2html::cfg2html]",
+    "recipe[capitalone_logrotate]",
+    "recipe[nmon::nmon]",
+    "recipe[controlmAgent::controlmAgent]",
+    "recipe[controlSA::controlSA]",
+    "recipe[ftppwd::ftppwd]",
+    "recipe[emc::inq]",
+    "recipe[osPatching::osPatching]"
+  ]
+}

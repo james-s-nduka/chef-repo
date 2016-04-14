@@ -1,0 +1,9 @@
+{
+  "name": "chef_master",
+  "description": "Upgrade, clean up certs and schedule chef-client run",
+  "run_list": [
+    "recipe[chef-client]",
+    "recipe[chef_client_ssl::chef_client_ssl]",
+    "recipe[chef_client_updater]"
+  ]
+}

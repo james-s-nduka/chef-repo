@@ -1,0 +1,7 @@
+{
+  "name": "Vanilla_hardening",
+  "description": "a role for securing a system by reducing its surface of vulnerability",
+  "run_list": [
+    "recipe[hardening]"
+  ]
+}

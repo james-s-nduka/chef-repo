@@ -1,0 +1,149 @@
+{
+  "name": "GFDRDJenkins",
+  "description": "Continuous Integration Build Environment which matches GFD RD Production",
+  "default_attributes":{
+    "rpmVersion": {
+      "cfg2html-linux": "2.25-1",
+      "capitalone-controlm-agent-patch": "7.0.00.500-1.el6",
+      "capitalone-controlm-agent-chef": "7.0.00-1.el6",
+      "capitalone-install-controlm-agent-config": "7.0.00-1.el6",
+      "capitalone-install-controlsa-chef": "3.1.02-1.el6",
+      "capitalone-install-controlsa-patch": "3.1.02.200-1.el6",
+      "capitalone-emcinq": "1.0.0-1.el6",
+      "capitalone-install-ftppwd": "1.2-1.el6",
+      "capitalone-pbclient_64_chef": "6.0.1-1.el6",
+      "capitalone-encase-servlet": "7.10.4.2-1.el6",
+      "capitalone-install-hp-ddmi": "9.32-1.el6",
+      "capitalone-install-omagent-chef": "11.00-1.el6",
+      "capitalone-install-nmon": "14g-1.el6",
+      "TIVsm-BA": "7.1.0-3",
+      "TIVsm-API64": "7.1.0-3"
+    },
+    "chef_client_updater": {
+      "rhel5": {
+        "package": "chef-12.3.0-1.el5.x86_64.rpm"
+      },
+      "rhel6": {
+        "package": "chef-12.3.0-1.el6.x86_64.rpm"
+      }
+    },
+    "dnsResolver": {
+      "rhel": {
+        "domain": "domain dr.uk.capitalone.com",
+        "search": "search dr.uk.capitalone.com cof.ds.capitalone.com ds.capitalone.com kdc.capitalone.com us.capitalone.com capitalone.com",
+        "nameserver1": "nameserver 10.169.3.20",
+        "nameserver2": "nameserver 10.175.2.20",
+        "nameserver3": "nameserver 10.167.2.20",
+        "nameserver4": ""
+      },
+      "windows": {
+        "domain": "cof.ds.capitalone.com",
+        "search": "cof.ds.capitalone.com ds.capitalone.com dr.uk.capitalone.com kdc.capitalone.com",
+        "nameserver1": "nameserver 10.170.19.5",
+        "nameserver2": "nameserver 10.170.19.6"
+      }
+    },
+    "controlm": {
+      "ctrlmServer": "ctrlm3p",
+      "atcmndata": "23735",
+      "agcmndata": "23736",
+      "rhelPackage": "capitalone-install-controlm-agent-config-ctrlm3p"
+    },
+    "redHatSatellite":{
+      "site": "GFD",
+      "c1_env": "Prod"
+    },
+    "powerbroker":{
+      "pbServers": "gfdlx297"
+    },
+    "syslog":{
+      "server": "mordor-lc2"
+    },
+    "tsmClient":{
+      "tsmServer": "ngmlx015"
+    },
+    "test_env_common": {
+      "gem_source": {
+        "url1": "https://buildtools.uk.capitalone.com/nexus/content/groups/rubygems-all/"
+      }
+    },
+    "ORACLE_DATABASE": {
+      "BASE_DIRECTORY": "/tmp/chef",
+      "CREATE_DATABASE": {
+        "ADMIN_DATA_TS01_SIZE": "100M",
+        "ADMIN_IDX_TS01_SIZE": "100M",
+        "APP_DATA_TS01_SIZE": "512M",
+        "APP_IDX_TS01_SIZE": "256M",
+        "AUDIT_DATA_TS01_SIZE": "256M",
+        "AUDIT_IDX_TS01_SIZE": "128M",
+        "AUDIT_SYS": "TRUE",
+        "AUDIT_TRAIL": "OS",
+        "CHEF_DATA_TS01_SIZE": "200M",
+        "CLUSTER": ["rhel_jenkins_rac01","rhel_jenkins_rac02"],
+        "ENV": "P",
+        "ENVIRONMENT": "PROD",
+        "GRID": "JENKRAC01SDP",
+        "GRID_VERSION": "11.2.0.4",
+        "GROUP_OWNER": "dba",
+        "LOGICAL_VOLUME_SIZE": "2G",
+        "MAXINSTANCES": "2",
+        "MAXSETSIZE": "10G",
+        "NET1_REMOTE_LISTENER": "JENKRAC01_REMOTE_NET1",
+        "NET3_REMOTE_LISTENER": "JENKRAC01_REMOTE_NET3",
+        "ORACLE_VERSION": "11.2.0.4",
+        "PFILE_TEMPLATE": "ORACLE_DEFAULT_PFILE",
+        "REDO_SIZE": "200M",
+        "REDO_SIZE": "200M",
+        "RMAN_RET": "60",
+        "RMAN_SID": "prman",
+        "RMAN_USER": "rman",
+        "RUN_AS_USER": "oracle",
+        "SHAREDDATA": "SHAREDDATA01",
+        "SHAREDFRA": "SHAREDFRA01",
+        "SHAREDTEMP": "SHAREDTEMP01",
+        "SYSAUX_TS_SIZE": "1G" ,
+        "SYSTEM_TS_SIZE": "1G",
+        "TEMP_TS01_SIZE": "1G",
+        "TOOLS_TS01_SIZE": "100M",
+        "UNDO_TS01_SIZE": "1G",
+        "USER_DATA_TS01_SIZE": "1G"
+      },
+      "LOG_DIRECTORY": "/tmp/chef/log",
+      "NEZUMI": {
+        "GRID_VERSION": "11.2.0.4",
+        "ORACLE_VERSION": "11.2.0.4",
+        "ORACLE_BASE": "/ofa/u001/app/oracle/product/",
+        "ORACLE_HOME": "/ofa/u001/app/oracle/product/11.2.0.4",
+        "GRID_NAME": "JENKRAC01SDP",
+        "DEFAULT_USER": "oracle",
+        "DEFAULT_GROUP": "dba",
+        "DEFAULT_PERM": "755",
+        "CHEF_TABLE_OWNER": "SYS",
+        "CHEF_TABLESPACE": "CHEF_DATA_TS01",
+        "CHEF_DB_PARAMETERS_TABLE": "CHEF_DB_PAR"
+      },
+      "RUN_DIRECTORY": "/tmp/chef/code",
+      "STORAGE_POOLS": {
+        "CHEFRAC01SDP": "2",
+        "JENKRAC01SDP": "3",
+        "REDOMEMBER1": "SHAREDREDO1",
+        "REDOMEMBER2": "SHAREDREDO2",
+        "REDOMEMBER3": "SHAREDREDO3",
+        "SHAREDDATA_PREFIX": "SHAREDDATA",
+        "SHAREDTEMP_PREFIX": "SHAREDTEMP",
+        "SHAREDFRA_PREFIX": "SHAREDFRA"
+      },
+      "SQL_USER_STRING": "sqlplus '/ as sysdba'",
+      "SQL_PARAMETER_STRING": "SET LINESIZE 130 PAGESIZE 2000 ECHO ON TERMOUT ON TIME ON HEAD OFF"
+    },
+    "hardening": {
+      "3.2.15": {
+        "ssh": {
+          "PermitRoot": "yes"
+        }
+      },
+      "60_day_exclusion_users": [ "root", "bin", "daemon", "adm", "lp", "sync", "shutdown", "halt", "mail", "uucp", "operator", "games", "gopher", "ftp", "nobody", "dbus", "rpc", "vcsa", "abrt", "saslauth", "mailnull", "smmsp", "haldaemon", "ntp", "sshd", "nscd", "rpcuser", "nfsnobody", "vagrant" ]
+    }
+  }
+}
+

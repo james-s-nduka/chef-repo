@@ -1,0 +1,10 @@
+{
+  "name": "Vanilla_Apache",
+  "description": "The role will install and configure the apache webserver without hardening",
+  "run_list": [
+    "recipe[capitalone_apache::package_install]",
+    "recipe[capitalone_apache::capitalone_dir_setup]",
+    "recipe[capitalone_apache::capitalone_demo_only_config]",
+    "recipe[capitalone_apache::capitalone_certs_files_and_start]"
+  ]
+}

@@ -1,0 +1,169 @@
+{
+  "name": "DevJenkins",
+  "description": "Continuous Integration Build Environment",
+  "default_attributes":{
+    "rpmVersion": {
+      "cfg2html-linux": "2.25-1",
+      "capitalone-controlm-agent-patch": "7.0.00.500-1.el6",
+      "capitalone-controlm-agent-chef": "7.0.00-1.el6",
+      "capitalone-install-controlm-agent-config": "7.0.00-1.el6",
+      "capitalone-install-controlsa-chef": "3.1.02-1.el6",
+      "capitalone-install-controlsa-patch": "3.1.02.200-1.el6",
+      "capitalone-emcinq": "1.0.0-1.el6",
+      "capitalone-install-ftppwd": "1.2-1.el6",
+      "capitalone-pbclient_64_chef": "6.0.1-1.el6",
+      "capitalone-encase-servlet": "7.10.4.2-1.el6",
+      "capitalone-install-hp-ddmi": "9.32-1.el6",
+      "capitalone-install-omagent-chef": "11.00-1.el6",
+      "capitalone-install-nmon": "14g-1.el6",
+      "TIVsm-BA": "7.1.0-3",
+      "TIVsm-API64": "7.1.0-3"
+    },
+    "chef_client_updater": {
+      "rhel5": {
+        "package": "chef-12.3.0-1.el5.x86_64.rpm"
+      },
+      "rhel6": {
+        "package": "chef-12.3.0-1.el6.x86_64.rpm"
+      }
+    },
+    "dnsResolver": {
+      "rhel":{
+        "domain": "domain dev.uk.capitalone.com",
+        "search": "search dev.uk.capitalone.com uk.capitalone.com",
+        "nameserver1": "nameserver 172.22.130.139",
+        "nameserver2": "nameserver 10.8.145.95",
+        "nameserver3": "",
+        "nameserver4": ""
+      },
+      "windows":{
+        "domain": "dqa.capitalone.com",
+        "search": "dqa.capitalone.com dev.uk.capitalone.com cof.ds.capitalone.com ds.capitalone.com uk.capitalone.com kdc.capitalone.com",
+        "nameserver1": "nameserver 172.22.130.139",
+        "nameserver2": "nameserver 10.8.145.95"
+      }
+    },
+    "berkshelf_api": {
+      "config": {
+        "endpoints": [
+          {
+            "type": "chef_server",
+            "options": {
+            "url": "https://chefuk.uk.capitalone.com/organizations/caponeuk",
+            "client_key": "/etc/berkshelf/api-server/berkshelf.pem",
+            "client_name": "berkshelf",
+             "ssl_verify" : false
+            }
+          }
+        ],
+      "build_interval": 5.0
+      },
+    "host": "rhel_jenkins.dev.uk.capitalone.com"
+    },
+    "controlm":{
+      "ctrlmServer": "ctrlm1d",
+      "atcmndata": "23815",
+      "agcmndata": "23816",
+      "rhelPackage": "capitalone-install-controlm-agent-config-ctrlm1d"
+    },
+    "redHatSatellite":{
+      "site": "NGM",
+      "c1_env": "Dev-SysTest"
+    },
+    "powerbroker":{
+      "pbServers": "ngmlx297 ngmlx298"
+    },
+    "syslog":{
+      "server": "mordor-lc1"
+    },
+    "tsmClient":{
+      "tsmServer": "ngmlx015"
+    },
+    "test_env_common": {
+      "gem_source": {
+        "url1": "https://buildtools.uk.capitalone.com/nexus/content/groups/rubygems-all/"
+      }
+    },
+    "ORACLE_DATABASE": {
+      "BASE_DIRECTORY": "/tmp/chef",
+      "CREATE_DATABASE": {
+        "ADMIN_DATA_TS01_SIZE": "50M",
+        "ADMIN_IDX_TS01_SIZE": "50M",
+        "APP_DATA_TS01_SIZE": "512M",
+        "APP_IDX_TS01_SIZE": "256M",
+        "AUDIT_DATA_TS01_SIZE": "50M",
+        "AUDIT_IDX_TS01_SIZE": "50M",
+        "AUDIT_SYS": "FALSE",
+        "AUDIT_TRAIL": "NONE",
+        "CHEF_DATA_TS01_SIZE": "100M",
+        "CLUSTER": ["rhel_jenkins_rac01","rhel_jenkins_rac02"],
+        "ENV": "DV",
+        "ENVIRONMENT": "DEV",
+        "GRID": "JENKRAC01SDP",
+        "GRID_VERSION": "11.2.0.4",
+        "GROUP_OWNER": "dba",
+        "LOGICAL_VOLUME_SIZE": "2G",
+        "MAXINSTANCES": "2",
+        "MAXSETSIZE": "5G",
+        "NET1_REMOTE_LISTENER": "JENKRAC01_REMOTE_NET1",
+        "NET3_REMOTE_LISTENER": "JENKRAC01_REMOTE_NET3",
+        "ORACLE_VERSION": "11.2.0.4",
+        "PFILE_TEMPLATE": "ORACLE_DEFAULT_PFILE",
+        "REDO_SIZE": "200M",
+        "RMAN_RET": "30",
+        "RMAN_SID": "dtrman",
+        "RMAN_USER": "rman_nonprod",
+        "RUN_AS_USER": "oracle",
+        "SHAREDDATA": "SHAREDDATA01",
+        "SHAREDFRA": "SHAREDFRA01",
+        "SHAREDTEMP": "SHAREDTEMP01",
+        "SYSAUX_TS_SIZE": "1G",
+        "SYSTEM_TS_SIZE": "1G",
+        "TEMP_TS01_SIZE": "512M",
+        "TOOLS_TS01_SIZE": "50M",
+        "UNDO_TS01_SIZE": "512M",
+        "USER_DATA_TS01_SIZE": "512M"
+      },
+      "LOG_DIRECTORY": "/tmp/chef/log",
+      "NEZUMI": {
+        "GRID_VERSION": "11.2.0.4",
+        "ORACLE_VERSION": "11.2.0.4",
+        "ORACLE_BASE": "/ofa/u001/app/oracle/product/",
+        "ORACLE_HOME": "/ofa/u001/app/oracle/product/11.2.0.4",
+        "GRID_NAME": "JENKRAC01SDP",
+        "DEFAULT_USER": "oracle",
+        "DEFAULT_GROUP": "dba",
+        "DEFAULT_PERM": "755",
+        "CHEF_TABLE_OWNER": "SYS",
+        "CHEF_TABLESPACE": "CHEF_DATA_TS01",
+        "CHEF_DB_PARAMETERS_TABLE": "CHEF_DB_PAR"
+      },
+      "RUN_DIRECTORY": "/tmp/chef/code",
+      "STORAGE_POOLS": {
+        "CHEFRAC01SDP": "2",
+        "JENKRAC01SDP": "3",
+        "REDOMEMBER1": "SHAREDREDO1",
+        "REDOMEMBER2": "SHAREDREDO2",
+        "REDOMEMBER3": "SHAREDREDO3",
+        "SHAREDDATA_PREFIX": "SHAREDDATA",
+        "SHAREDTEMP_PREFIX": "SHAREDTEMP",
+        "SHAREDFRA_PREFIX": "SHAREDFRA"
+      },
+      "SQL_USER_STRING": "sqlplus '/ as sysdba'",
+      "SQL_PARAMETER_STRING": "SET LINESIZE 130 PAGESIZE 2000 ECHO ON TERMOUT ON TIME ON HEAD OFF"
+    },
+    "hardening": {
+      "3.2.15": {
+        "ssh": {
+          "PermitRoot": "yes"
+        }
+      },
+      "60_day_exclusion_users": [ "root", "bin", "daemon", "adm", "lp", "sync", "shutdown", "halt", "mail", "uucp", "operator", "games", "gopher", "ftp", "nobody", "dbus", "rpc", "vcsa", "abrt", "saslauth", "mailnull", "smmsp", "haldaemon", "ntp", "sshd", "nscd", "rpcuser", "nfsnobody", "vagrant" ]
+    },
+    "ropensource": {
+      "R": {
+        "CRAN": "http://seamitecran.dev.uk.capitalone.com/"
+      }
+    } 
+  }
+}

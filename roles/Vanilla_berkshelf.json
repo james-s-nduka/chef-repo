@@ -1,0 +1,7 @@
+{
+  "name": "Vanilla_berkshelf",
+  "description": "Berkshelf API Role",
+  "run_list": [
+    "recipe[capitalone_berkshelf::default]"
+  ]
+}

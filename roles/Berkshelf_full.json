@@ -1,0 +1,47 @@
+{
+  "name": "Berkshelf_full",
+  "description": "The role will install and configure the CI Berkshelf API server with hardening",
+  "override_attributes": {
+    "chef_client": {
+      "interval": "3600"
+    },
+    "hardening": {
+      "3.2.15": {
+        "ssh": {
+          "PermitRoot": "yes"
+        }
+      },
+      "60_day_exclusion_users": [ "root", "bin", "daemon", "adm", "lp", "sync", "shutdown", "halt", "mail", "uucp", "operator", "games", "gopher", "ftp", "nobody", "dbus", "rpc", "vcsa", "abrt", "saslauth", "mailnull", "smmsp", "haldaemon", "ntp", "sshd", "nscd", "rpcuser", "nfsnobody", "vagrant" ]
+    },
+    "test_env_common": {
+      "users": {
+          "root": "/root"
+        }
+    }
+  },
+  "default_attributes": {
+    "berkshelf_api": {
+      "config": {
+        "endpoints": [
+          {
+            "type": "chef_server",
+            "options": {
+              "url": "https://chefuk.uk.capitalone.com/organizations/caponeuk",
+              "client_key": "/etc/berkshelf/api-server/berkshelf.pem",
+              "client_name": "berkshelf",
+              "ssl_verify": false
+            }
+          }
+        ],
+        "build_interval": 5.0
+      },
+      "host": "berkshelf.uk.capitalone.com"
+    }
+  },
+  "run_list": [
+    "role[chef_master]",
+    "role[Vanilla_Linux_Base]",
+    "role[Vanilla_berkshelf]",
+    "role[Vanilla_hardening]"
+  ]
+}

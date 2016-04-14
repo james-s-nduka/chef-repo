@@ -1,0 +1,33 @@
+{
+  "id": "ldap",
+  "bind_dn": {
+    "encrypted_data": "yIujd0KRSfzBhT72V6+M+SOWSk/pZC3Q1gqFkiKh6PuRKvOa3YczcKB0MAUR\ndzI5TYuKMrD/iEIp0dSsMFIWL5wAJGfd6SEXwdN7AxawuaAE+rTnBO4piabd\nAxaUjwiy\n",
+    "iv": "3rNdvu5hqCouv/X+/vdC+A==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "password": {
+    "encrypted_data": "QRj4APZVZQaE1HU0eyri4hyOnyAq2DvVZGjmPDYkqls=\n",
+    "iv": "idv5ynKyOIK6Eu50fQ8cAg==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "host": {
+    "encrypted_data": "5dajzb+1j6fPwU0/Cvd4V6wivTzAGlutx20TYT4+4h4=\n",
+    "iv": "RSVknZgY7w323/R3zgOyaA==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "port": {
+    "encrypted_data": "7PkkerjSnBnUYVDatmBOc231cEjeCICz4C/OJe2/wD4=\n",
+    "iv": "orvYoJ+Pycla6WbBvH5Qgw==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "base": {
+    "encrypted_data": "K1TjJYQ+HgF4VFovcfByr4KNwagvJP66PyAxPX+sCtc75ztnGADFv0yces4m\nFngN/xNbVFBqiaC8GnFidvG/mY/G8QiFbETykwUrlW12nwo=\n",
+    "iv": "4Fc05FpfyG9NkC16w2yzEg==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  }
+}

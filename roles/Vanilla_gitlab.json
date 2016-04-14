@@ -1,0 +1,7 @@
+{
+  "name": "Vanilla_gitlab",
+  "description": "Role assigned to gitlab servers to deploy gitlab",
+  "run_list": [
+    "recipe[capitalone_gitlab]"
+  ]
+}

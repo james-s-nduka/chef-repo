@@ -1,0 +1,9 @@
+{
+  "id": "edagent",
+  "comment": "Enterprise Discovery User, Wayne Lutz",
+  "uid": "54492",
+  "gid": "edgrp",
+  "home": "/opt/edagent",
+  "shell": "/bin/bash",
+  "password": "$6$QLskshyx$fPXIZqOORx0R/ULnUe539w6z2iaZfCMxER2UmIGFjUy8fhMpbqUY1fSvV3Os0PIZkCeLLaCzrdfmtBmn2Be3K0"
+}

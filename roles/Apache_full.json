@@ -1,0 +1,15 @@
+{
+  "name": "Apache_full",
+  "description": "The role will install and configure the apache webserver with hardening",
+  "override_attributes": {
+    "chef_client": {
+      "interval": "3600"
+    }
+  },
+  "run_list": [
+    "role[chef_master]",
+    "role[Vanilla_Linux_Base]",
+    "role[Vanilla_Apache]",
+    "role[Vanilla_hardening]"
+  ]
+}

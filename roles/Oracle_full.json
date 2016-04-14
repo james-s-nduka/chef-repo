@@ -1,0 +1,16 @@
+{
+  "name": "Oracle_full",
+  "description": "Oracle Database Role",
+  "override_attributes": {
+    "chef_client": {
+      "interval": "3600"
+    }
+  },
+  "run_list": [
+    "role[chef_master]",
+    "recipe[oracle_database_status::oracle_database_check]",
+    "recipe[oracle_database_create_si::oracle_create_database]",
+    "recipe[oracle_nezumi_os_hardening::oracle_nezumi_os_hardening]",
+    "recipe[oracle_nezumi_db_hardening::oracle_nezumi_db_hardening]"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "gitlab_full",
+  "description": "Role assigned to gitlab servers to deploy gitlab - Includes base, hardening, etc",
+  "run_list": [
+    "role[chef_master]",
+    "role[Vanilla_Linux_Base]",
+    "role[Vanilla_gitlab]",
+    "role[Vanilla_hardening]"
+  ],
+  "override_attributes": {
+    "hardening": {
+      "3.2.28": {
+        "extra_system_users": [
+          "git",
+          "gitlab-redis",
+          "gitlab-www",
+          "gitlab-psql"
+        ]
+      }
+    }
+  }
+}
