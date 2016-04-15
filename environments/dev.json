@@ -2,7 +2,7 @@
   "name": "dev",
   "description": "Place your Dev nodes here",
   "cookbook_versions": {
-    "sample-cookbook": "= 0.1.1"
+    "sample-cookbook": "= 0.1.11"
   },
   "default_attributes":{
   }
