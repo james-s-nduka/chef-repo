@@ -1,5 +1,5 @@
 {
-  "name": "ppe",
+  "name": "PREPROD",
   "description": "Place your Pre-Production nodes here",
   "cookbook_versions": {
     "sample-cookbook": "= 0.1.1"
