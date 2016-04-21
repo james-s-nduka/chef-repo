@@ -1,9 +1,0 @@
-{
-  "name": "PROD",
-  "description": "Place your TIL nodes here",
-  "cookbook_versions": {
-    "sample-cookbook": "= 0.1.1"
-  },
-  "default_attributes":{
-  }
-}
