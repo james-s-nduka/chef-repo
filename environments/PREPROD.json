@@ -2,7 +2,7 @@
   "name": "PREPROD",
   "description": "Place your Pre-Production nodes here",
   "cookbook_versions": {
-    "sample-cookbook": "= 0.1.1"
+    "sample-cookbook": "= 0.2.2"
   },
   "default_attributes":{
   }
